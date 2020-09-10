@@ -8,7 +8,6 @@ type ResponseLoginType = {
     token: string
     tokenDeathTime: number
     success: boolean
-
 }
 
 const axiosInstance = axios.create({
@@ -17,10 +16,11 @@ const axiosInstance = axios.create({
 
 export const authAPI = {
     login(email: string, password: string, rememberMe: boolean) {
-        return axiosInstance.post<ResponseLoginType>("/time", {
+        return axiosInstance.post<ResponseLoginType>("/login", {
             email,
             password,
-            rememberMe})
+            rememberMe
+        })
             .then(res => {
                 return res
             })

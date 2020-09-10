@@ -11,13 +11,13 @@ type OwnPropTypes = {
 const Input = (props: OwnPropTypes) => {
     // let errorClass = this.props.state.error ? 'error' : '';
     return (
-      <div className='input'>
-        <input type="text" placeholder= {props.placeholder}
-               className={props.type}
-               value={props.value}
-               onChange={props.onChange}
-               autoFocus={true}/>
-      </div>
+        <div className='input'>
+            <input type="text" placeholder={props.placeholder}
+                   className={props.type}
+                   value={props.value}
+                   onChange={props.onChange}
+                   autoFocus={true}/>
+        </div>
     );
 }
 

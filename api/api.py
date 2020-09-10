@@ -8,10 +8,6 @@ def not_found(e):
     return app.send_static_file('index.html')
 
 
-@app.route('/')
+@app.route('/login')
 def index():
     return 'test'
-
-@app.route('/time')
-def get_current_time():
-    return {'time': time.time()}

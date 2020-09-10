@@ -12,6 +12,7 @@ export const initialState = {
     isAuth: false,
     isDisabled: false,
     isFetching: false,
+    token: ''
 }
 
 export const loginReducer = (state: InitialStateType = initialState, action: any): InitialStateType => {
@@ -22,6 +23,7 @@ export const loginReducer = (state: InitialStateType = initialState, action: any
                 isAuth: true,
                 isDisabled: true,
                 isFetching: true,
+                token: action.token
             }
         }
         case LOGIN_ERROR: {
@@ -65,6 +67,6 @@ export const signIn = (email: string, password: string, rememberMe: boolean): Th
         dispatch(loginSuccsess(res.data.token))
     } catch (e) {
         dispatch(showError())
-        // alert(e.response.data.error)
+        alert(e.response.data.error)
     }
 }

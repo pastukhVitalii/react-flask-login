@@ -45,7 +45,7 @@ const Login = () => {
     return (
 
         <>
-            <div>{token}
+            <div>
                 <div>
                     <Input type={inputStyle} placeholder={'e-mail'} value={email} onChange={setEmailCallBack}/>
                 </div>
